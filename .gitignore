@@ -1,0 +1,71 @@
+# ─── Python ────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.venv-*/
+*.egg-info/
+.eggs/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.ipynb_checkpoints/
+
+# ─── Node / Next.js ────────────────────────────────────────
+node_modules/
+.next/
+out/
+dist/
+build/
+.turbo/
+*.tsbuildinfo
+next-env.d.ts
+.swc/
+
+# ─── Testing ───────────────────────────────────────────────
+playwright-report/
+test-results/
+.nyc_output/
+
+# ─── Environment & Secrets ─────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+!.env.example
+
+# ─── ML / Data ─────────────────────────────────────────────
+model_cache/
+mlruns/
+mlartifacts/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.joblib
+*.pkl
+data/raw/
+data/processed/
+!data/.gitkeep
+
+# ─── Infra / Docker ────────────────────────────────────────
+infrastructure/nginx/certs/
+*.log
+logs/
+
+# ─── OS / Editor ───────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.swp

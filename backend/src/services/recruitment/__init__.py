@@ -1,0 +1,1 @@
+"""Recruitment Intelligence service."""

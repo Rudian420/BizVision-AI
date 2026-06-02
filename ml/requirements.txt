@@ -1,0 +1,49 @@
+# ============================================================
+# BizVision AI — ML workspace dependencies
+# Used by the ml-dev container and training pipelines. The FastAPI
+# backend re-uses a subset (see backend/requirements.txt).
+# ============================================================
+
+# ─── Core scientific stack ─────────────────────────────────
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.13.0
+scikit-learn==1.4.2
+
+# ─── Gradient boosting ─────────────────────────────────────
+xgboost==2.0.3
+lightgbm==4.3.0
+
+# ─── Deep learning ─────────────────────────────────────────
+torch==2.3.0
+
+# ─── NLP / embeddings ──────────────────────────────────────
+transformers==4.41.0
+sentence-transformers==3.0.0
+
+# ─── Time series ───────────────────────────────────────────
+prophet==1.1.5
+statsmodels==0.14.2
+
+# ─── Explainability + fairness ─────────────────────────────
+shap==0.45.1
+lime==0.2.0.1
+fairlearn==0.10.0
+aif360==0.6.1
+
+# ─── Reinforcement learning (pricing agent) ────────────────
+gymnasium==0.29.1
+stable-baselines3==2.3.2
+
+# ─── MLOps ─────────────────────────────────────────────────
+mlflow==2.13.0
+dvc==3.50.1
+
+# ─── Notebooks / dev ───────────────────────────────────────
+jupyterlab==4.2.2
+matplotlib==3.9.0
+seaborn==0.13.2
+
+# ─── Testing ───────────────────────────────────────────────
+pytest==8.2.2
+faker==25.8.0

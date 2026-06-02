@@ -1,0 +1,24 @@
+"""Environment snapshot — captured into every MLflow run."""
+
+from __future__ import annotations
+
+import platform
+import sys
+from datetime import datetime, timezone
+
+
+def capture_env_snapshot() -> dict[str, str]:
+    """Return a JSON-serialisable dict describing the current env."""
+    snapshot: dict[str, str] = {
+        "captured_at": datetime.now(timezone.utc).isoformat(),
+        "python_version": sys.version.split()[0],
+        "platform": platform.platform(),
+        "machine": platform.machine(),
+    }
+    try:
+        import numpy as np
+
+        snapshot["numpy_version"] = np.__version__
+    except ImportError:
+        snapshot["numpy_version"] = "absent"
+    return snapshot
