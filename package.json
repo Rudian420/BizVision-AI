@@ -25,9 +25,9 @@
     "clean": "turbo run clean && rimraf node_modules"
   },
   "devDependencies": {
-    "turbo": "^2.0.6",
+    "turbo": "^2.9.16",
     "prettier": "^3.3.2",
-    "prettier-plugin-tailwindcss": "^0.6.5",
+    "prettier-plugin-tailwindcss": "^0.8.0",
     "rimraf": "^5.0.7",
     "openapi-typescript": "^7.0.2"
   }
