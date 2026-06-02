@@ -74,7 +74,7 @@ dvc==3.50.1
 langchain==0.2.1
 langchain-anthropic==0.1.15
 langchain-openai==0.1.8
-langgraph==0.1.1
+langgraph==1.2.4
 langchain-community==0.2.1
 
 # ─── Storage ───────────────────────────────────────────────
