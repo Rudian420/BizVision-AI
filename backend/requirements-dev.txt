@@ -19,4 +19,4 @@ asgi-lifespan==2.1.0   # exercise startup/shutdown in tests
 aiosqlite==0.20.0      # in-memory async DB for fast unit tests
 
 # ─── Dev ergonomics ────────────────────────────────────────
-pre-commit==3.7.1
+pre-commit==4.6.0
