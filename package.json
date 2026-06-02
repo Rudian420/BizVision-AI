@@ -1,0 +1,34 @@
+{
+  "name": "bizvision-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BizVision AI — Elite SME Decision Intelligence Platform (monorepo root)",
+  "license": "MIT",
+  "packageManager": "npm@10.8.1",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "workspaces": [
+    "frontend",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "type-check": "turbo run type-check",
+    "test": "turbo run test",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\" --ignore-path .prettierignore",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,md}\" --ignore-path .prettierignore",
+    "contracts:generate": "npm run generate --workspace @bizvision/contracts",
+    "clean": "turbo run clean && rimraf node_modules"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.6",
+    "prettier": "^3.3.2",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "rimraf": "^5.0.7",
+    "openapi-typescript": "^7.0.2"
+  }
+}

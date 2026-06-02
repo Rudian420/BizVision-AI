@@ -1,0 +1,31 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "types": ["node"],
+    "plugins": [{ "name": "next" }],
+    // 3D/shader code does heavy typed-array + uniform indexing; the strict
+    // index/unused checks from the base config are too noisy here and are
+    // covered by ESLint instead.
+    "noUncheckedIndexedAccess": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@bizvision/contracts": ["../packages/contracts/src/index.ts"],
+      "@bizvision/contracts/*": ["../packages/contracts/src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules", ".next", "playwright-report", "test-results"]
+}

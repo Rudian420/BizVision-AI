@@ -1,0 +1,24 @@
+{
+  "name": "@bizvision/contracts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shared API contracts between the FastAPI backend and the Next.js frontend",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./generated": "./src/generated/api.ts"
+  },
+  "scripts": {
+    "generate": "node scripts/generate-types.mjs",
+    "generate:from-url": "openapi-typescript http://localhost:8000/api/v1/openapi.json -o src/generated/api.ts",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "clean": "rimraf dist src/generated/api.ts"
+  },
+  "devDependencies": {
+    "openapi-typescript": "^7.0.2",
+    "typescript": "5.5.2"
+  }
+}
