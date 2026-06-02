@@ -1,9 +1,9 @@
-﻿# ============================================================
+# ============================================================
 # BizVision AI â€” Backend Dockerfile
 # Multi-stage: development (hot reload) + production (optimized)
 # ============================================================
 
-FROM python:3.11-slim as base
+FROM python:3.14-slim as base
 
 # System dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
