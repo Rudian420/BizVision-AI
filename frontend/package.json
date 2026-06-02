@@ -42,7 +42,7 @@
     "plotly.js": "^2.33.0",
     "react-plotly.js": "^2.6.0",
     "d3": "^7.9.0",
-    "recharts": "^2.12.7",
+    "recharts": "^3.8.1",
 
     "axios": "^1.7.2",
     "socket.io-client": "^4.7.5",
