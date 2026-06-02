@@ -1,0 +1,108 @@
+{
+  "name": "bizvision-ai-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BizVision AI — Elite SME Intelligence Platform Frontend",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint && eslint src --ext .ts,.tsx",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "analyze": "ANALYZE=true next build"
+  },
+  "dependencies": {
+    "@bizvision/contracts": "*",
+
+    "next": "14.2.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+
+    "three": "^0.165.0",
+    "@react-three/fiber": "^8.16.8",
+    "@react-three/drei": "^9.105.4",
+    "@react-three/postprocessing": "^2.16.2",
+    "postprocessing": "^6.35.4",
+    "@theatre/core": "^0.7.1",
+    "@theatre/studio": "^0.7.1",
+
+    "gsap": "^3.12.5",
+    "@gsap/react": "^2.1.1",
+    "framer-motion": "^11.2.11",
+    "lenis": "^1.1.2",
+
+    "zustand": "^4.5.2",
+    "@tanstack/react-query": "^5.44.0",
+    "@tanstack/react-query-devtools": "^5.44.0",
+
+    "plotly.js": "^2.33.0",
+    "react-plotly.js": "^2.6.0",
+    "d3": "^7.9.0",
+    "recharts": "^2.12.7",
+
+    "axios": "^1.7.2",
+    "socket.io-client": "^4.7.5",
+    "swr": "^2.2.5",
+
+    "react-hook-form": "^7.52.0",
+    "@hookform/resolvers": "^3.6.0",
+    "zod": "^3.23.8",
+
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.3.0",
+    "class-variance-authority": "^0.7.0",
+    "lucide-react": "^0.400.0",
+
+    "date-fns": "^3.6.0",
+    "lodash": "^4.17.21",
+    "nanoid": "^5.0.7",
+    "immer": "^10.1.1",
+
+    "react-intersection-observer": "^9.10.3",
+    "react-use": "^17.5.0"
+  },
+  "devDependencies": {
+    "typescript": "5.5.2",
+    "@types/node": "^20.14.9",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@types/three": "^0.165.0",
+    "@types/d3": "^7.4.3",
+    "@types/lodash": "^4.17.6",
+    "@types/plotly.js": "^2.33.0",
+
+    "tailwindcss": "^3.4.4",
+    "postcss": "^8.4.39",
+    "autoprefixer": "^10.4.19",
+
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.4",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "prettier": "^3.3.2",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+
+    "vitest": "^1.6.0",
+    "@vitest/ui": "^1.6.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@vitest/coverage-v8": "^1.6.0",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/user-event": "^14.5.2",
+    "jsdom": "^24.1.0",
+
+    "@playwright/test": "^1.45.0",
+
+    "@next/bundle-analyzer": "^14.2.4",
+    "cross-env": "^7.0.3"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  }
+}

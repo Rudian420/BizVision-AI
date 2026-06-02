@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   BizVision AI — Global Design Token System
+   ============================================================ */
+
+@layer base {
+  :root {
+    /* ── Color System ─────────────────────────────────────── */
+
+    /* Backgrounds — Deep Space */
+    --color-void:      #050A14;
+    --color-abyss:     #080F1E;
+    --color-surface:   #0D1929;
+    --color-surface-2: #112035;
+    --color-surface-3: #162840;
+    --color-border:    #1A2F4A;
+    --color-border-2:  #243D5C;
+
+    /* Brand — Electric Intelligence */
+    --color-cyan:      #00F5FF;
+    --color-cyan-dim:  #00B8BF;
+    --color-cyan-muted:#006B70;
+    --color-cyan-glow: rgba(0, 245, 255, 0.15);
+
+    /* Module Accents */
+    --color-gold:      #FFB800;   /* Pricing */
+    --color-gold-dim:  #CC9200;
+    --color-violet:    #7C3AED;   /* Forecasting */
+    --color-violet-dim:#5B21B6;
+    --color-emerald:   #10F07C;   /* Sustainability */
+    --color-emerald-dim:#059669;
+    --color-coral:     #FF3B6B;   /* Chatbot */
+    --color-coral-dim: #E11D48;
+
+    /* Status */
+    --color-success:   #10F07C;
+    --color-warning:   #FFB800;
+    --color-danger:    #FF3B6B;
+    --color-info:      #00F5FF;
+
+    /* Text */
+    --color-text-primary:   #E8F4FF;
+    --color-text-secondary: #8AA0B8;
+    --color-text-muted:     #4A6080;
+    --color-text-disabled:  #2A3F55;
+
+    /* ── Typography ───────────────────────────────────────── */
+    --font-ui:    var(--font-ui), 'DM Sans', system-ui, sans-serif;
+    --font-data:  var(--font-data), 'Fira Code', monospace;
+
+    /* ── Spacing Scale ────────────────────────────────────── */
+    --space-px:   1px;
+    --space-0-5:  2px;
+    --space-1:    4px;
+    --space-2:    8px;
+    --space-3:    12px;
+    --space-4:    16px;
+    --space-6:    24px;
+    --space-8:    32px;
+    --space-12:   48px;
+    --space-16:   64px;
+    --space-24:   96px;
+    --space-32:   128px;
+
+    /* ── Border Radius ────────────────────────────────────── */
+    --radius-sm:  4px;
+    --radius-md:  8px;
+    --radius-lg:  12px;
+    --radius-xl:  16px;
+    --radius-2xl: 24px;
+    --radius-full:9999px;
+
+    /* ── Shadow / Glow System ─────────────────────────────── */
+    --glow-cyan:    0 0 20px rgba(0, 245, 255, 0.3), 0 0 60px rgba(0, 245, 255, 0.1);
+    --glow-gold:    0 0 20px rgba(255, 184, 0, 0.3), 0 0 60px rgba(255, 184, 0, 0.1);
+    --glow-violet:  0 0 20px rgba(124, 58, 237, 0.3), 0 0 60px rgba(124, 58, 237, 0.1);
+    --glow-emerald: 0 0 20px rgba(16, 240, 124, 0.3), 0 0 60px rgba(16, 240, 124, 0.1);
+    --glow-coral:   0 0 20px rgba(255, 59, 107, 0.3), 0 0 60px rgba(255, 59, 107, 0.1);
+
+    /* ── Animation Timing ─────────────────────────────────── */
+    --duration-micro:    80ms;
+    --duration-fast:     200ms;
+    --duration-medium:   400ms;
+    --duration-slow:     800ms;
+    --duration-cinematic:2000ms;
+
+    --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-smooth:   cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-cinematic:cubic-bezier(0.76, 0, 0.24, 1);
+  }
+}
+
+/* ── Base Styles ────────────────────────────────────────────── */
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-void);
+    color: var(--color-text-primary);
+    font-family: var(--font-ui);
+    line-height: 1.6;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--color-abyss); }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-cyan-muted);
+    border-radius: var(--radius-full);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-cyan-dim); }
+
+  /* Selection */
+  ::selection {
+    background: rgba(0, 245, 255, 0.2);
+    color: var(--color-text-primary);
+  }
+
+  /* Focus styles */
+  *:focus-visible {
+    outline: 2px solid var(--color-cyan);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+}
+
+/* ── Component Classes ──────────────────────────────────────── */
+@layer components {
+
+  /* Glass morphism card */
+  .glass {
+    background: rgba(13, 25, 41, 0.7);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(0, 245, 255, 0.08);
+    box-shadow:
+      0 4px 32px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(0, 245, 255, 0.04);
+  }
+
+  .glass-hover {
+    transition: border-color var(--duration-fast) var(--ease-smooth),
+                box-shadow var(--duration-fast) var(--ease-smooth);
+  }
+  .glass-hover:hover {
+    border-color: rgba(0, 245, 255, 0.2);
+    box-shadow:
+      0 4px 32px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(0, 245, 255, 0.1),
+      inset 0 1px 0 rgba(0, 245, 255, 0.08);
+  }
+
+  /* Gradient border */
+  .border-gradient-cyan {
+    border: 1px solid transparent;
+    background:
+      linear-gradient(var(--color-surface), var(--color-surface)) padding-box,
+      linear-gradient(135deg, var(--color-cyan), transparent) border-box;
+  }
+
+  /* Glow text */
+  .text-glow-cyan {
+    text-shadow:
+      0 0 10px rgba(0, 245, 255, 0.5),
+      0 0 30px rgba(0, 245, 255, 0.2);
+  }
+  .text-glow-gold {
+    text-shadow:
+      0 0 10px rgba(255, 184, 0, 0.5),
+      0 0 30px rgba(255, 184, 0, 0.2);
+  }
+
+  /* Neural scanline overlay */
+  .scanlines::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 4px
+    );
+    pointer-events: none;
+  }
+
+  /* Animated gradient border */
+  @keyframes border-rotate {
+    from { --gradient-angle: 0deg; }
+    to   { --gradient-angle: 360deg; }
+  }
+
+  /* AI pulse animation */
+  @keyframes ai-pulse {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50%       { opacity: 1;   transform: scale(1.05); }
+  }
+
+  .ai-pulse { animation: ai-pulse 3s ease-in-out infinite; }
+
+  /* Data stream animation */
+  @keyframes data-stream {
+    from { transform: translateY(0); opacity: 1; }
+    to   { transform: translateY(-100%); opacity: 0; }
+  }
+}
+
+/* ── Utility Extensions ─────────────────────────────────────── */
+@layer utilities {
+  .bg-void    { background-color: var(--color-void); }
+  .bg-abyss   { background-color: var(--color-abyss); }
+  .bg-surface { background-color: var(--color-surface); }
+
+  .text-primary   { color: var(--color-text-primary); }
+  .text-secondary { color: var(--color-text-secondary); }
+  .text-muted     { color: var(--color-text-muted); }
+  .text-cyan      { color: var(--color-cyan); }
+  .text-gold      { color: var(--color-gold); }
+  .text-violet    { color: var(--color-violet); }
+  .text-emerald   { color: var(--color-emerald); }
+  .text-coral     { color: var(--color-coral); }
+
+  .font-ui   { font-family: var(--font-ui); }
+  .font-data { font-family: var(--font-data); }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

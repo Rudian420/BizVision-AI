@@ -1,0 +1,11 @@
+apiVersion: 1
+
+providers:
+  - name: BizVision
+    orgId: 1
+    folder: BizVision AI
+    type: file
+    disableDeletion: false
+    editable: true
+    options:
+      path: /etc/grafana/provisioning/dashboards

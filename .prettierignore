@@ -1,0 +1,15 @@
+node_modules
+.next
+.turbo
+dist
+build
+coverage
+**/__pycache__
+**/*.py
+project-management
+*.lock
+package-lock.json
+pnpm-lock.yaml
+infrastructure/postgres/init.sql
+frontend/src/types/api.ts
+packages/contracts/src/generated

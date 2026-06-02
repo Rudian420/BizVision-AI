@@ -1,0 +1,12 @@
+node_modules
+.next
+.turbo
+out
+dist
+coverage
+playwright-report
+test-results
+.env.local
+*.md
+e2e
+.eslintcache
