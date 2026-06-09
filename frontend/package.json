@@ -57,7 +57,7 @@
     "class-variance-authority": "^0.7.0",
     "lucide-react": "^0.400.0",
 
-    "date-fns": "^3.6.0",
+    "date-fns": "^4.4.0",
     "lodash": "^4.17.21",
     "nanoid": "^5.0.7",
     "immer": "^10.1.1",
