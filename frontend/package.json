@@ -24,7 +24,7 @@
 
     "three": "^0.165.0",
     "@react-three/fiber": "^8.16.8",
-    "@react-three/drei": "^9.105.4",
+    "@react-three/drei": "^10.7.7",
     "@react-three/postprocessing": "^2.16.2",
     "postprocessing": "^6.35.4",
     "@theatre/core": "^0.7.1",
